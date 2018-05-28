@@ -12,7 +12,7 @@ function ValidateForm(){
   var validUserPassword = false;
   var validAddress = false;
   var validCity = false;
-  var country = document.getElementById("countries").value;
+  var countries = document.getElementById("countries").value;
   var validZipcode = false;
   var errorMessages ="";  // All the error messages are going to stay in this variable
 
