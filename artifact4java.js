@@ -28,6 +28,12 @@ function ValidateForm(){
      else
      validLastname = true; 
   
+  /*********** VALIDATES EMAIL ******** */
+  if (atpos < 1 || dotpos < atpos  +2 || dotpos + 2 >= userEmail.length || userEmail.value==="")
+    errorMessages += "<p>Invalid email.</p>";
+  else
+    validEmail = true; 
+  
   /*********** VALIDATES PHONE NUMBER ******** */
   if (myContact.phone.value===null || myContact.phone.value===""|| myContact.phone.value.length > 15 || !myContact.phone.value.match(numbers))
     errorMessages += "<p>The phone number must be less than 15 characters and it is required. Only numbers are accepted.</p>";
