@@ -66,8 +66,9 @@ function ValidateForm(){
     validCity = true; 
   
 /*********** VALIDATES ZIP CODE ******** */
-  if (myContact.countries === "USA" && myContact.zipcode.value.length > 5 || myContact.zipcode.value===null ||myContact.zipcode.value===""||!myContact.zipcode.value.match(numbers))
-    errorMessages += "<p>Zip code must be maximum of 5 characters and is reqired. Only numbers are accepted.</p>";
+  if (myContact.countries === "USA")
+	if(myContact.zipcode.value.length > 5 || myContact.zipcode.value===null ||myContact.zipcode.value===""||!myContact.zipcode.value.match(numbers))
+		errorMessages += "<p>Zip code must be maximum of 5 characters and is reqired. Only numbers are accepted.</p>";
   else
     validZipcode = true; 
  
